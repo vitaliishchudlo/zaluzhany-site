@@ -1,8 +1,9 @@
 from django.urls import path
 
-from historical_events.views import index, second
+from historical_events.views import index, about
+
 
 urlpatterns = [
-    path('', index),
-    path('test/<int:catid>/', second),
+    path('', index, name='home'),
+    path('about/', about, name='about'),
 ]

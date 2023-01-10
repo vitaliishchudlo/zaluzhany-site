@@ -1,9 +1,16 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
+from django.shortcuts import render, redirect
+from .models import HistoricalEvents
+import json
+from django.core import serializers
 
 
 def index(request):
-    return HttpResponse('<h1>Home page</h1>')
+    events = HistoricalEvents.objects.all()
+    # events = serializers.serialize('json', events)
+    return render(request, 'historical_events/index.html', {'events': events})
 
-
-def second(request, catid):
-    return HttpResponse(f'<h2>I am in second, ID - {catid}</h2>')
+def about(request):
+    # events = HistoricalEvents.objects.all()
+    # events = serializers.serialize('json', events)
+    return render(request, 'historical_events/index.html')
