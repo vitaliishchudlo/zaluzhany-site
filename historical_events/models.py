@@ -5,7 +5,7 @@ from django.utils import timezone
 # Create your models here.
 
 class HistoricalEvent(models.Model):
-    event_date = models.DateField()
+    event_date = models.DateField(input_formats=['%d-%m-%Y', '%Y-%m-%d'])
     title = models.CharField(max_length=100)
     content = models.TextField()
     time_created = models.DateTimeField(auto_now_add=True)
