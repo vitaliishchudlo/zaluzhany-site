@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from .models import BusSchedule
-from .models import Route, ChurchSchedule
+from .models import ChurchSchedule
 
 
 class BusScheduleAdmin(admin.ModelAdmin):
@@ -9,6 +9,5 @@ class BusScheduleAdmin(admin.ModelAdmin):
     fields = ('route_start', 'route_end', 'content', 'images', 'notes')
 
 
-admin.site.register(Route)
 admin.site.register(BusSchedule, BusScheduleAdmin)
 admin.site.register(ChurchSchedule)
