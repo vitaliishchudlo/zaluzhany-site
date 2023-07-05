@@ -10,3 +10,7 @@ class HistoricalEvent(models.Model):
 
     def __str__(self):
         return f'{self.title} | {self.event_date}'
+
+    class Meta:
+        verbose_name = 'Історична подія'
+        verbose_name_plural = 'Історичні події'
