@@ -14,3 +14,4 @@ class HistoricalEvent(models.Model):
     class Meta:
         verbose_name = 'Історична подія'
         verbose_name_plural = 'Історичні події'
+        db_table = 'historical_events_historical_event'

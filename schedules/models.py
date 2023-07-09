@@ -14,7 +14,7 @@ class BusSchedule(models.Model):
                                    default="Дрогобич")
     route_end = models.CharField(verbose_name="Кінець маршруту", choices=ROUTE_CHOICES, max_length=100)
     content = models.TextField(verbose_name="Опис маршруту")
-    images = models.ImageField(verbose_name="Фотографії", upload_to='schedule/bus')
+    image = models.ImageField(verbose_name="Фотографії", upload_to='schedule/bus')
     notes = models.TextField(verbose_name="Примітки", blank=True, null=True)
 
     def __str__(self):
@@ -23,13 +23,15 @@ class BusSchedule(models.Model):
     class Meta:
         verbose_name = 'Автобусний розклад'
         verbose_name_plural = 'Автобусні розклади'
+        db_table = 'schedules_bus'
 
 
 class ChurchSchedule(models.Model):
     date_from = models.DateField(verbose_name="Актуально від", default=timezone.now)
     date_to = models.DateField(verbose_name="Актуально до", default=timezone.now)
-    images = models.ImageField(verbose_name="Фотографії", upload_to='schedule/church')
     notes = models.TextField(verbose_name="Примітки", blank=True, null=True)
+
+    # images = models.ImageField(verbose_name="Фотографії", upload_to='schedule/church')
 
     def __str__(self):
         return f"Церковий розклад від {self.date_from} до {self.date_to}"
@@ -37,3 +39,15 @@ class ChurchSchedule(models.Model):
     class Meta:
         verbose_name = 'Церковний розклад'
         verbose_name_plural = 'Церковний розклад'
+        db_table = 'schedules_church'
+
+
+class ChurchScheduleImage(models.Model):
+    schedule = models.ForeignKey(ChurchSchedule, on_delete=models.CASCADE, related_name='church_schedule_images')
+    images = models.ImageField(verbose_name="Фотографія", upload_to='schedule/church')
+
+    def __str__(self):
+        return f"Фотографія для Церковного розкладу {self.schedule}"
+
+    class Meta:
+        db_table = 'schedules_church_images'

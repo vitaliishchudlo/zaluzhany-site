@@ -14,3 +14,5 @@ class Article(models.Model):
     class Meta:
         verbose_name = 'Новина'
         verbose_name_plural = 'Новини'
+        db_table = 'news_article'
+
