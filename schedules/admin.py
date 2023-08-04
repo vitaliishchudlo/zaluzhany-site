@@ -23,7 +23,7 @@ class ChurchScheduleImageInline(admin.TabularInline):
 
 class ChurchScheduleAdmin(admin.ModelAdmin):
     inlines = [ChurchScheduleImageInline]
-    readonly_fields = ('date_from', 'date_to')
+    #readonly_fields = ('date_from', 'date_to')
     fields = ('date_from', 'date_to', 'notes')
 
 

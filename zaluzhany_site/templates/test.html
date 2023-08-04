@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Your Site Title{% endblock %}</title>
+    <!-- Підключення CSS стилів -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Стилі для лого */
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: #ccc;
+            /* додайте свої стилі для лого тут */
+            margin-right: 10px; /* Відступ справа */
+        }
+
+        /* Стилі для меню */
+        .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-item {
+            margin: 0 10px;
+            /* додайте свої стилі для пунктів меню тут */
+        }
+
+        /* Стилі для header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .content {
+            margin-right: 50px; /* Відступ справа */
+            margin-left: 50px; /* Відступ зліва */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <!-- Лого зліва -->
+    <div class="logo"></div>
+    <!-- Меню справа -->
+    <nav class="menu">
+        <div class="menu-item"><a href="/">Головна</a></div>
+        <div class="menu-item"><a href="/news/">Новини</a></div>
+        <div class="menu-item"><a href="/history/">Історія</a></div>
+        <div class="menu-item"><a href="/bus_schedule/">Розклад автобусів</a></div>
+        <div class="menu-item"><a href="/church_schedule/">Розклад церковний</a></div>
+        <div class="menu-item"><a href="/fk_trizub/">ФК Тризуб</a></div>
+    </nav>
+</header>
+
+<div class="content">
+    {% block content %}
+    <!-- Це місце для вміщення контенту з інших сторінок -->
+    {% endblock %}
+</div>
+
+</body>
+</html>
