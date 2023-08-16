@@ -23,6 +23,6 @@ from django.urls import path, include
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
-                  path('', include('historical_events.urls')),
+                  path('', include('apps.historical_events.urls')),
 
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # New

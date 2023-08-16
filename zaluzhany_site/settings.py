@@ -14,7 +14,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATE_PATH = os.path.join(Path(__file__).resolve().parent, "templates")
+TEMPLATE_PATH = os.path.join(BASE_DIR, "templates")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -36,9 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'historical_events',
-    'news',
-    'schedules'
+    'apps.historical_events',
+    'apps.news',
+    'apps.schedules'
 ]
 
 MIDDLEWARE = [
@@ -117,9 +117,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = []
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') # The absolute path to the directory where collectstatic will collect static files for deployment.
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/css'), os.path.join(BASE_DIR, 'static/img')]
+
+
+
+
+print('STATIC ROOT FOLDER:', STATIC_ROOT)
 
 DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 

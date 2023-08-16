@@ -1,0 +1,64 @@
+/* Стилі для header*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 5px;
+    background-color: #f5f5f5; /* Приклад фонового кольору */
+}
+
+/* Стилі для лого */
+.logo {
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    /* додайте свої стилі для лого тут */
+    margin-right: 30px; /* Відступ справа */
+    margin-left: 30px; /* Відступ зліва */
+}
+
+/* Стилі для меню */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Розміщуємо меню справа */
+    margin-right: 50px; /* Відступ справа */
+    margin-left: 50px; /* Відступ зліва */
+}
+
+.menu-item {
+    margin: 0 10px;
+    /* додайте свої стилі для пунктів меню тут */
+}
+
+.content {
+    margin-right: 50px; /* Відступ справа */
+    margin-left: 50px; /* Відступ зліва */
+}
+
+/* Стилі для підменю */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.submenu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.submenu a:hover {
+    text-decoration: underline;
+}
