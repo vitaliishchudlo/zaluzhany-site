@@ -119,7 +119,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static') # The absolute path to the directory where collectstatic will collect static files for deployment.
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/css'), os.path.join(BASE_DIR, 'static/img')]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'assets/css'),
+    os.path.join(BASE_DIR, 'assets/img')
+]
 
 
 
