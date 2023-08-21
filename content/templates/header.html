@@ -1,0 +1,21 @@
+{% load static %}
+
+<!-- Лого зліва -->
+<div class="logo">
+    <img src="{% static 'logo.jpeg' %}" alt="Logo" class="logo">
+</div>
+
+<!-- Меню справа -->
+<nav class="menu">
+    <div class="menu-item"><a href="/">Головна</a></div>
+    <div class="menu-item"><a href="/news/">Новини</a></div>
+    <div class="menu-item"><a href="/history/">Історія</a></div>
+    <div class="menu-item">
+        <a href="/schedule/">Розклад</a>
+        <ul class="submenu">
+            <li><a href="/bus_schedule/">Автобусний</a></li>
+            <li><a href="/church_schedule/">Церковний</a></li>
+        </ul>
+    </div>
+    <div class="menu-item"><a href="/fk_trizub/">ФК Тризуб</a></div>
+</nav>

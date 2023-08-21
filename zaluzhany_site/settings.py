@@ -14,7 +14,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATE_PATH = os.path.join(BASE_DIR, "templates")
+TEMPLATE_PATH = os.path.join(BASE_DIR, "content/templates")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -118,20 +118,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static') # The absolute path to the directory where collectstatic will collect static files for deployment.
+STATIC_ROOT = os.path.join(BASE_DIR, 'content/static') # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'assets/css'),
-    os.path.join(BASE_DIR, 'assets/img')
+    os.path.join(BASE_DIR, 'content/assets/css'),
+    os.path.join(BASE_DIR, 'content/assets/img')
 ]
 
 
 
-
-print('STATIC ROOT FOLDER:', STATIC_ROOT)
-
 DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'content/media')
 MEDIA_URL = '/media/'
 
 # Default primary key field type
