@@ -1,0 +1,22 @@
+/* Стилі для лого */
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+/* Стилі для меню */
+.navbar-right {
+    margin-right: 0; /* Видаліть відступ з правого боку */
+    margin-left: auto; /* Вирівнювання до правого боку */
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav > li {
+    margin: 0 15px;
+    list-style: none;
+}
