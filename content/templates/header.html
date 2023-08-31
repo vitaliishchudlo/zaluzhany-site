@@ -1,44 +1,40 @@
 {% load static %}
 
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-<!--            <a class="navbar-brand" href="">Залужани</a>-->
-            <img src="{% static 'logo.jpeg' %}" alt="Logo" class="navbar-brand">
+
+<header>
+    <nav class="navbar" style="background-color: red; margin: 5px 15%">
+        <div class="nav-logo">
+            <a class="nav-logo-link" href="/">
+                <img src=logo.jpeg" alt="Village Logo">
+            </a>
+
         </div>
-        <ul class="nav navbar-nav">
-            <li><a href="#">Головна</a></li>
-            <li><a href="#">Новини</a></li>
-            <li><a href="#">Історія</a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Розклад <span
-                    class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Автобусний</a></li>
-                    <li><a href="#">Церковний</a></li>
-                </ul>
-            </li>
-            <li><a href="#">ФК Тризуб</a></li>
-        </ul>
-    </div>
-</nav>
+        <div class="nav-navigation">
+            <ul class="nav-navigation-list">
+                <li class="nav-item">
+                    <a class="nav-item-link" href="#">Головна</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item-link" href="#">Новини</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item-link" href="#">Історія</a>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Розклад</a>
+                    <div class="dropdown-content">
+                        <a href="#">Автобусний</a>
+                        <a href="#">Церковний</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item-link" href="#">ФК "Тризуб"</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
 
-<!--<header>-->
-<!--    &lt;!&ndash; Лого та Меню &ndash;&gt;-->
-<!--    <div class="logo">-->
-<!--        <img src="{% static 'logo.jpeg' %}" alt="Logo" class="logo">-->
-<!--    </div>-->
-<!--    <nav class="menu">-->
-<!--        <div class="menu-item"><a href="/">Головна</a></div>-->
-<!--        <div class="menu-item"><a href="/news/">Новини</a></div>-->
-<!--        <div class="menu-item"><a href="/history/">Історія</a></div>-->
-<!--        <div class="menu-item">-->
-<!--            <a href="/schedule/">Розклад</a>-->
-<!--            <ul class="submenu">-->
-<!--                <li><a href="/bus_schedule/">Автобусний</a></li>-->
-<!--                <li><a href="/church_schedule/">Церковний</a></li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--        <div class="menu-item"><a href="/fk_trizub/">ФК Тризуб</a></div>-->
-<!--    </nav>-->
-<!--</header>-->
+
+
