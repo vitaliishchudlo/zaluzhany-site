@@ -2,13 +2,11 @@
 
 
 <header>
-    <nav class="navbar" style="background-color: red; margin: 5px 15%">
-        <div class="nav-logo">
-            <a class="nav-logo-link" href="/">
-                <img src=logo.jpeg" alt="Village Logo">
-            </a>
+    <nav class="navbar">
+        <a class="nav-logo-link" href="/">
+            <img src="{% static 'logo.png' %}" class="image-logo" alt="Village Logo">
+        </a>
 
-        </div>
         <div class="nav-navigation">
             <ul class="nav-navigation-list">
                 <li class="nav-item">
@@ -20,12 +18,11 @@
                 <li class="nav-item">
                     <a class="nav-item-link" href="#">Історія</a>
                 </li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Розклад</a>
-                    <div class="dropdown-content">
-                        <a href="#">Автобусний</a>
-                        <a href="#">Церковний</a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-item-link" href="#">Розклад церковний</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item-link" href="#">Розклад автобусний</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-item-link" href="#">ФК "Тризуб"</a>
