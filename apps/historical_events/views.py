@@ -5,5 +5,7 @@ def home(request):
     context = {
         'title_variable': 'Historical Events Home',
         'content_variable': 'This is the content for the Historical Events Home Page.',
+        'active_menu': 'main'
     }
     return render(request, 'historical_events/home.html', context)
+

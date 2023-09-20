@@ -7,19 +7,19 @@
     <title>{% block title %}Zaluzhany{% endblock %}</title>
 
     <!-- Підключення CSS стилів -->
-<!--    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">-->
+    <!--    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">-->
     <link rel="stylesheet" type="text/css" href="{% static 'header.css' %}">
 
 </head>
 <body>
 
-{% include 'header.html' %}
 
+{% include 'header.html' %}
 
 <div class="content">
     {% block content %}
-    <!-- Це місце для вміщення контенту з інших сторінок -->
     {% endblock %}
+
 </div>
 </body>
 </html>

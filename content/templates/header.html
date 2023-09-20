@@ -1,36 +1,18 @@
 {% load static %}
 
 
-<header>
-    <nav class="navbar">
-        <a class="nav-logo-link" href="/">
-            <img src="{% static 'logo.png' %}" class="image-logo" alt="Village Logo">
-        </a>
+<div class="header">
+    <a href="#" class="logo">Zaluzhany</a>
+    <div class="header-right">
+        <a {% if active_menu == 'main' %}class="active"{% endif %} href="{% url 'home' %}">Головна</a>
+        <a {% if active_menu == 'news' %}class="active"{% endif %} href="#">Новини</a>
+        <a {% if active_menu == 'schedule_church' %}class="active"{% endif %} href="#">Розклад церковний</a>
+        <a {% if active_menu == 'schedule_bus' %}class="active"{% endif %} href="#">Розклад автобусний</a>
+        <a {% if active_menu == 'fc_trizub' %}class="active"{% endif %} href="#">ФК "Тризуб"</a>
+    </div>
+</div>
 
-        <div class="nav-navigation">
-            <ul class="nav-navigation-list">
-                <li class="nav-item">
-                    <a class="nav-item-link" href="#">Головна</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-item-link" href="#">Новини</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-item-link" href="#">Історія</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-item-link" href="#">Розклад церковний</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-item-link" href="#">Розклад автобусний</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-item-link" href="#">ФК "Тризуб"</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
+<img class="back-image" src="{% static 'logo_main2.png' %}" alt="background-image">
 
 
 
