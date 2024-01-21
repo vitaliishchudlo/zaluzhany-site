@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+	font-family: 'Roboto Slab', serif;
+}
+body.main {
+	margin: 0;
+	background: no-repeat url('img/logo_darker.png');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+body.news {
+	margin: 0;
+	background: no-repeat url('img/background.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+nav a {
+	transition: 0.8s;
+}
+
+nav a.navbar-brand:hover {
+	transform: scale(1.1);
+}
+.info-block {
+	box-shadow: inset 0px 0px 58px 33px rgba(255, 255, 255, 1);
+	margin-inline: 24px;
+	border-radius: 24px;
+	color: #666;
+}
+
+.title {
+	color: #555555;
+}
+
+.footer {
+	margin-inline: 24px;
+	border-radius: 24px 24px 0 0;
+	background-color: rgb(33, 37, 41);
+	color: white;
+	padding: 36px;
+	padding-inline: 200px;
+	margin-top: 15%;
+}
+.footer svg {
+	margin-left: 24px;
+}
+.footer h4 {
+	margin: 0;
+}
+.footer a {
+	text-decoration: none;
+	color: white;
+	transition: 0.8s;
+}
+.footer a:hover {
+	transform: scale(1.1);
+}
+
+.historical-block h3 {
+	color: #b7916a;
+	font-size: 1.4em;
+	font-weight: bold;
+	line-height: 1.4em;
+}
+
+.historical-block p {
+	color: #666;
+	font-size: 1.2em;
+	line-height: 1.3em;
+}
+.historical-block h2 {
+	color: #679468;
+}
+
+.historical-block::before {
+	top: 0;
+	left: 18%;
+	color: #ddd;
+	width: 0;
+	border: 2px solid;
+	bottom: 0;
+	content: '';
+	position: absolute;
+}
+
+.historical-block-circle::before {
+	top: 50%;
+	right: -27%;
+	width: 8px;
+	border: 4px solid;
+	height: 8px;
+	content: '';
+	z-index: 99;
+	position: absolute;
+	box-sizing: content-box;
+	border-radius: 100%;
+	background-color: #fff;
+	transform: translate(0, -50%);
+}
+
+.card-block,
+.card-block-details {
+	box-shadow: inset 0px 0px 58px 3px rgb(175, 173, 173);
+	border-radius: 24px;
+	color: #666;
+	transition: 0.8s;
+}
+.card-block:hover {
+	transform: scale(1.1);
+}
+
+.custom-card {
+	border-radius: 24px;
+	height: 320px;
+	position: relative;
+	background-color: rgba(73, 72, 72, 0.209);
+	border: none;
+}
+
+.custom-card .card-img-overlay {
+	z-index: 2;
+}
+
+.custom-card p {
+	font-size: 1.2em;
+}
+
+.custom-card div {
+	border-radius: 24px;
+	z-index: 2;
+	overflow: hidden;
+}
+
+.custom-card img {
+	z-index: 1;
+	filter: brightness(70%);
+}
+
+.custom-card a {
+	position: absolute;
+	bottom: 30px;
+	right: 80px;
+	padding-inline: 32px;
+	padding-block: 8px;
+	z-index: 4;
+}
+
+/* Стилі для екранів шириною 830 пікселів і більше */
+.details-card img {
+	width: 540px;
+	float: left;
+	margin-right: 24px;
+	border-radius: 24px;
+}
+
+.details-card-church img {
+	width: 100%;
+	float: center;
+	margin-right: 24px;
+	margin-bottom: 35px;
+	border-radius: 24px;
+}
+
+
+/* Стилі для екранів шириною менше 1008 пікселів */
+@media (max-width: 1008px) {
+    .details-card img {
+        width: 100%; /* або інше значення за вашим вибором для адаптації до ваших потреб */
+		margin-right: 24px;
+		border-radius: 24px;
+    }
+}
+
+.details-card p {
+	text-align: justify;
+}
